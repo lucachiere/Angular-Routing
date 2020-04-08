@@ -14,7 +14,7 @@ export class SpotifyService {
     const url = `https://api.spotify.com/v1/search?q=${query}&type=track`;
     const headers = new HttpHeaders({
       Authorization:
-        'Bearer curl -X "GET" "https://api.spotify.com/v1/search?q=eravamo%20re&type=track" -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer BQBj8edZc_8DXNnMZz39S3rA21Oq96GhfGqbTk3JiUt8XhI9EtvDChwoBX_gUDU8x4Fj6J5jFQS4AtTJetrY-V0aGKNYmWXe01EOAQ96sqssRNTlQ94upjOUrPBiY-EGOXNqTom_LJiI2GIRbDu-sy1JTys9vNY9Jzm-eU__YoNc_wy82bxVdp8jm1jMWGOprVpm_MENxhDOCpVeAhP5-qDYi_wCoxY2KcSo7nH-QnRk5dllqq0wj5Q8adWqC3gGIEx0tMg57ZwjEos"'
+        'Bearer BQCNJHgs3hz9oHMWnyUUe2oNUrs7_H8d2w14b-vYPBZBB0EhPErwqBDM9Euy6CfZYxiN7aYXBXh8ss366NbrGHshSk-XpM7jcMP81ZEnAv-u2SvdrGfJZCWtC7_pDPBV2ZPCs0VBHiUJNozk0umGzKZ1UAgM71hjv3ZH4sKDmagjTRXQmXBzjNt-tQIywKVl6hCD1Aor30ed37X7B32-VQB6k_sJH5k4x7UUaCtnzN4_VaZAJleNeJksqdRro9CFnilwbGn3C12pPLc"'
     });
 
     let obsTracks = this.http.get(url, { headers });
