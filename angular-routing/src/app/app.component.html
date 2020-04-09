@@ -1,10 +1,7 @@
-<h1>Search</h1>
-
-<p>
-  <input type="text" #newquery>
-  <button (click)="submit(newquery)">Search</button>
-</p>
-
-<div *ngIf="results">
-   {{results | json}}
-</div>
+<h1>Angular Router</h1>
+<nav>
+  <a routerLink="/about" routerLinkActive="active">about</a> |
+  <a routerLink="/search" routerLinkActive="active">search</a>
+</nav>
+<!--qui è dove angular sostituirà i componenti richiamati dal routing-->
+<router-outlet></router-outlet>
