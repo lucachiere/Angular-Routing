@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  oauthToken: "Bearer BQDy2-n72-H1PK86VBRLVNXCSvQPefASBAABiFPMDDUHxL71kKg_ZNn67moe9pBR_38mAW61_r6dKt734ay6R9oodDhYVDZdwVfK8COo3wz0BpLIgLZ5avI9mGaIMwkVDyZyzWNM9DTilBgHSCUYY-Wn_F0J1EKE4QN64ZzxPXOM3pwm0Wsn8_S1PwuqZu-H9qvmqLcq4yKzENxLTGGdytzMf5azpnn8AoLuL7GRlAqQ2qHp0JgN3_-wbhfP8AjeJsmKcmAkYH2cG6k"
+  oauthToken: "Bearer BQBbPkqxv5-E3Spe-rPn8rWhruhtBhhM5ECFKvydTHk_7TgDbcOiZpwy7FbJmiluoTNx20DUYOvynL5FFFZZs1BL_JN9yE7BYZCEjw2IMeedn-x-kOOksHTqL0PPi0GfYTUbrJx_oMJ_pCsDl1EcsTsEYLnm4gDnEi4O0fZZA-hk5WceAPwELOL50oGeJeOa74XBQbyRGbmbHHJ7JaHCKvf8f3tCD3wGVVkeWQ_TUYjxxxKsZ_3jIpJI0MCt6iV-vJttbH96S-kqgk8"
 };
 
 /*
