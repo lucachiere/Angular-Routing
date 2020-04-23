@@ -1,1 +1,23 @@
-<p>album works!</p>
+<div *ngIf="album">
+    <h1><strong>{{ album.name }}</strong></h1>
+           <ul>
+            <li *ngFor="let artisti of album.artists">
+            <a [routerLink]="['/artists', artisti.id]">
+               <h3 class="text-danger"> {{ artisti.name }}</h3>
+                </a>
+            </li>
+        </ul>
+        <p>
+        <img src="{{ album.images[1].url }}">
+    </p>
+    <h1>tipo: {{ album.album_type }}</h1>
+      <h1>tracce totali: {{ album.total_tracks}}</h1>
+        <ul>
+            <li *ngFor="let artist of album.tracks.items">
+                <a [routerLink]="['/tracks', artist.id]">
+               <h3 class="text-danger"> {{ artist.name }}</h3>
+                </a>
+            </li>
+        </ul>
+      <p><a href (click)="back()">Back</a></p>
+</div>
