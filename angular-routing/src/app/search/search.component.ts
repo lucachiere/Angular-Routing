@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Unit } from './unit.model';
 import { Observable } from 'rxjs';
 import { SpotifyService } from '../spotify.service';
 
@@ -16,7 +18,19 @@ export class SearchComponent  {
   constructor(public spotify: SpotifyService) {
 
   }
+  postObserver : Observable<Object>;
+  postData : Object;
 
+  addUnit (newUnit: HTMLInputElement, newCost: HTMLInputElement, newHitSpeed: HTMLInputElement): boolean {
+      let newData = new Unit(newUnit.value, newCost.value, newHitSpeed.value);
+      let headers =  {headers: new HttpHeaders().set('Content-Type', 'application/json')};
+      //this.postObserver = this.http.post('https://3000-acb13a3a-bd01-4915-87cb-626d26b7ea44.ws-eu01.gitpod.io/songs', JSON.stringify(newData),headers)
+
+      //Meglio così ma da verificare
+      //this.postObserver = this.http.post('http://localhost:3000/users', newData);
+      this.postObserver.subscribe(data => this.postData = data);
+      return false;
+  }
   submit(query: HTMLInputElement): void {
 
     if (!query.value) {

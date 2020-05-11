@@ -1,10 +1,30 @@
-<h1>Search</h1>
-
-<p>
-  <input type="text" #newquery>
-  <button (click)="submit(newquery)">Search</button>
-</p>
-
+<br>
+<form class="jumbotron">
+  <h1>Search</h1>
+  <p>
+    <input type="text" #newquery >
+    <button (click)="submit(newquery)" class="btn btn-primary">Search</button>
+  </p>
+</form>
+<br>
+<form class="jumbotron">
+  <h3 >Aggiungi una canzone nei preferiti</h3>
+  <div>
+    <label for="titolo">Titolo della canzone:</label>
+    <input name="titolo" #newTitolo >
+  </div>
+  <div>
+    <label for="artista">Artista della canzone:</label>
+    <input name="artista" #newArtista >
+  </div>
+  <div>
+    <label for="album">Nome dell'album:</label>
+    <input name="album" #newAlbum >
+  </div>
+  <button (click)="addUnit(newTitolo, newArtista, newAlbum)" class="btn btn-primary">
+  Aggiungi
+  </button>
+</form>
 <div *ngIf="results">
   <div *ngIf="!results.tracks || results.tracks.items.length ==0">
     No tracks were found with the term '{{ query }}'

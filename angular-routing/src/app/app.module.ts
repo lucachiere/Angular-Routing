@@ -16,7 +16,7 @@ import { SearchComponent } from './search/search.component';
     ArtistComponent,
     TrackComponent,
     AlbumComponent,
-    SearchComponent
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
