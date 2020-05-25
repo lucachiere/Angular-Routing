@@ -1,3 +1,4 @@
+<br>
 <div *ngIf="track">
     <h1>{{ track.name }}</h1>
     <p>
@@ -6,5 +7,29 @@
     <p>
         <audio controls src="{{ track.preview_url }}"></audio>
     </p>
+    <br>
+    <form class="jumbotron bg-dark">
+      <h1 class="text-white">Aggiungi una canzone nei preferiti</h1>
+      <br>
+      <div>
+        <label for="titolo" class="text-muted">Titolo della canzone:</label>
+        <br>
+        <input name="titolo" #newTitolo >
+      </div>
+      <div>
+        <label for="artista" class="text-muted">Artista della canzone:</label>
+        <br>
+        <input name="artista" #newArtista >
+      </div>
+      <div>
+        <label for="album" class="text-muted">Nome dell'album:</label>
+        <br>
+        <input name="album" #newAlbum >
+      </div>
+      <br>
+      <button (click)="addUnit(newTitolo, newArtista, newAlbum)" class="btn btn-success">
+      Aggiungi
+      </button>
+    </form>
     <p><a href (click)="back()">Back</a></p>
 </div>

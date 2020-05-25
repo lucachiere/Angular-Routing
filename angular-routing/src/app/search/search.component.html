@@ -1,27 +1,36 @@
 <br>
-<form class="jumbotron">
-  <h1>Search</h1>
+<form class="jumbotron bg-dark">
+  <h1 class="text-white bg-dark">Cerca</h1>
+  <br>
   <p>
     <input type="text" #newquery >
-    <button (click)="submit(newquery)" class="btn btn-primary">Search</button>
+    <br>
+    <br>
+    <button (click)="submit(newquery)" class="btn btn-success">Cerca</button>
   </p>
 </form>
 <br>
-<form class="jumbotron">
-  <h3 >Aggiungi una canzone nei preferiti</h3>
+
+<form class="jumbotron bg-dark">
+  <h1 class="text-white">Aggiungi una canzone nei preferiti</h1>
+  <br>
   <div>
-    <label for="titolo">Titolo della canzone:</label>
+    <label for="titolo" class="text-muted">Titolo della canzone:</label>
+    <br>
     <input name="titolo" #newTitolo >
   </div>
   <div>
-    <label for="artista">Artista della canzone:</label>
+    <label for="artista" class="text-muted">Artista della canzone:</label>
+    <br>
     <input name="artista" #newArtista >
   </div>
   <div>
-    <label for="album">Nome dell'album:</label>
+    <label for="album" class="text-muted">Nome dell'album:</label>
+    <br>
     <input name="album" #newAlbum >
   </div>
-  <button (click)="addUnit(newTitolo, newArtista, newAlbum)" class="btn btn-primary">
+  <br>
+  <button (click)="addUnit(newTitolo, newArtista, newAlbum)" class="btn btn-success">
   Aggiungi
   </button>
 </form>
