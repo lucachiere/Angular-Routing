@@ -1,23 +1,32 @@
 <div *ngIf="album">
-    <h1><strong>{{ album.name }}</strong></h1>
+  <form class="jumbotron bg-dark">
+    <h1 class="text-white"><strong>{{ album.name }}</strong></h1>
+    <br>
            <ul>
             <li *ngFor="let artisti of album.artists">
             <a [routerLink]="['/artists', artisti.id]">
-               <h3 class="text-danger"> {{ artisti.name }}</h3>
+               <h3 class="text-white"> {{ artisti.name }}</h3>
                 </a>
             </li>
         </ul>
         <p>
+        <br>
         <img src="{{ album.images[1].url }}">
     </p>
-    <h1>tipo: {{ album.album_type }}</h1>
-      <h1>tracce totali: {{ album.total_tracks}}</h1>
+    <br>
+    <h1 class="text-white">tipo: {{ album.album_type }}</h1>
+    <br>
+      <h1 class="text-white">tracce totali: {{ album.total_tracks}}</h1>
+      <br>
         <ul>
             <li *ngFor="let artist of album.tracks.items">
+            <br>
                 <a [routerLink]="['/tracks', artist.id]">
-               <h3 class="text-danger"> {{ artist.name }}</h3>
+                <br>
+               <h3 class="text-success"> {{ artist.name }}</h3>
                 </a>
             </li>
         </ul>
+  </form>
       <p><a href (click)="back()">Back</a></p>
 </div>

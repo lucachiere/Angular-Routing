@@ -1,10 +1,16 @@
 <div *ngIf="artist">
-    <h1>{{ artist.name }}</h1>
-     <p>
-        <img src="{{ artist.images[1].url }}">
-    </p>
-    <h2>followers: {{ artist.followers.total }}</h2>
-    <h2>popolarità: {{ artist.popularity }}</h2>
-    <h2>genere: {{ artist.genres }}</h2>
+    <form class="jumbotron bg-dark">
+      <h1 class="text-white">{{ artist.name }}</h1>
+      <br>
+      <p>
+          <img src="{{ artist.images[1].url }}">
+      </p>
+      <br>
+      <h2 class="text-success">followers: {{ artist.followers.total }}</h2>
+      <br>
+      <h2 class="text-success">popolarità: {{ artist.popularity }}</h2>
+      <br>
+      <h2 class="text-success">genere: {{ artist.genres }}</h2>
+    </form>
   <p><a href (click)="back()">Back</a></p>
 </div>

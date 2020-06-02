@@ -31,14 +31,15 @@ export class SearchComponent  {
       this.postObserver.subscribe(data => this.postData = data);
       return false;
   }
-  submit(query: HTMLInputElement): void {
+  submit(query: HTMLInputElement): boolean {
 
     if (!query.value) {
-      return;
+      return false;
     }
     this.query = query.value;
     this.obsTrack = this.spotify.searchTrack(this.query);
     this.obsTrack.subscribe((data) => { this.results = data; console.log(this.results) });
+    return false;
   }
 
   renderResults(res: any): void {
